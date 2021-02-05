@@ -1,0 +1,650 @@
+html {
+  font-size: 62.5%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-size: 5rem;
+  color: #2d2d2d;
+}
+
+h3 {
+  font-size: 3rem;
+  color: #2d2d2d;
+}
+
+h4 {
+  font-size: 2rem;
+  color: #373737;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #373737;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 1 / span 1 / span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 6rem;
+  height: 5.5rem;
+  z-index: 10;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+header .ham {
+  padding: 1em;
+  border-radius: 100%;
+  cursor: pointer;
+  background: #f1a393;
+  border: solid 2px transparent;
+  -webkit-box-shadow: 2px 3px 3px rgba(46, 54, 68, 0.3);
+          box-shadow: 2px 3px 3px rgba(46, 54, 68, 0.3);
+}
+
+header img {
+  width: 100%;
+  max-width: 5.5rem;
+}
+
+nav {
+  border-radius: 0 2rem 2rem 0;
+  border: solid 2px transparent;
+  -webkit-box-shadow: 2px 3px 3px rgba(46, 54, 68, 0.3);
+          box-shadow: 2px 3px 3px rgba(46, 54, 68, 0.3);
+  z-index: 20;
+  background: white;
+  -webkit-clip-path: ellipse(50% 50% at -50% 50%);
+          clip-path: ellipse(50% 50% at -50% 50%);
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1em;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.5em;
+  margin: 0 0.5em;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #464646;
+  opacity: 0;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+nav ul li a:hover {
+  color: #d48272;
+}
+
+#outline {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
+      grid-template-columns: minmax(10rem, 10%) 1fr minmax(10rem, 10%);
+  -ms-grid-rows: 15% 1fr 15%;
+      grid-template-rows: 15% 1fr 15%;
+}
+
+#outline #bg {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: 2 / 1 / span 1 / span 4;
+  background: url(/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 0% 55%;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+
+#outline #focus {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: 1 / 1 / span 4 / span 4;
+  overflow: scroll;
+}
+
+#outline #focus #about {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#outline #focus #about #headshot {
+  height: 30rem;
+  width: 30rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid transparent;
+  -webkit-transform: translate(-75%, -20%);
+          transform: translate(-75%, -20%);
+}
+
+#outline #focus #about #headshot img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
+#outline #focus #about #card {
+  min-width: 40rem;
+  max-width: 60rem;
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateY(-45%);
+          transform: translateY(-45%);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+  border-radius: 3rem;
+  padding: 2rem 4rem;
+}
+
+#outline #focus #about #card ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 2.5rem;
+  width: 8.5rem;
+}
+
+#outline #focus #about #card ul a {
+  color: #464646;
+}
+
+#outline #focus #about #card ul li {
+  border-radius: 50%;
+  padding: 0rem 0.8rem;
+  padding-bottom: 0.2rem;
+}
+
+#outline #focus #about #card ul li:hover {
+  background-color: #f6a190;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+#outline #focus #about #card ul li:hover a {
+  color: white;
+}
+
+#outline #focus #skills {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#outline #focus #skills div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  margin: 5rem;
+  max-width: 60rem;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+  border-radius: 3rem;
+  padding: 5rem 0;
+}
+
+#outline #focus #skills div h2 {
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+}
+
+#outline #focus #skills div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  font-size: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#outline #focus #skills div ul i {
+  font-size: 5rem;
+}
+
+#outline #focus #skills div ul li {
+  margin: 0.5rem 3rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #464646;
+}
+
+#outline #focus #skills div ul li img {
+  width: 5rem;
+}
+
+#projectpage {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#projectpage h2 {
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+}
+
+#projectpage #projectholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  padding: 0rem 2.5rem;
+  margin: 5rem;
+}
+
+#projectpage #projectholder .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 20rem;
+          flex: 1 20rem;
+  min-width: 35rem;
+  max-width: 40rem;
+  padding: 2rem;
+  margin: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+  border-radius: 2rem;
+}
+
+#projectpage #projectholder .project a {
+  text-decoration: none;
+  color: #5a6380;
+}
+
+#projectpage #projectholder .project a:hover {
+  color: white;
+}
+
+#projectpage #projectholder .project ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 8.5rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 2.5rem;
+  margin-top: auto;
+}
+
+#projectpage #projectholder .project ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#projectpage #projectholder .project ul li a {
+  color: #464646;
+  border-radius: 50%;
+  padding: 0rem 0.8rem;
+  padding-bottom: 0.2rem;
+}
+
+#projectpage #projectholder .project ul li a:hover {
+  background-color: #7786b9;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 50%;
+  color: white;
+}
+
+#focus {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+#focus #about,
+#focus #skills,
+#focus #projectpage,
+#focus #contact {
+  scroll-snap-align: start;
+}
+
+#contact {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact #details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+  border-radius: 3rem;
+  padding: 2rem 4rem;
+}
+
+#contact p {
+  display: inline;
+}
+
+#contact ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 2.5rem;
+  width: 8.5rem;
+}
+
+#contact ul a {
+  color: #464646;
+}
+
+#contact ul li {
+  border-radius: 50%;
+  padding: 0rem 0.8rem;
+  padding-bottom: 0.2rem;
+}
+
+#contact ul li:hover {
+  background-color: #f6a190;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+#contact ul li:hover a {
+  color: white;
+}
+
+@media screen and (max-width: 1275px) {
+  #outline #focus #projectpage #projectholder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #outline #focus #about #headshot {
+    -webkit-transform: none;
+            transform: none;
+  }
+  #outline #focus #about #card {
+    -webkit-transform: none;
+            transform: none;
+    margin-top: 2rem;
+  }
+  #outline #focus #about #card ul.seq {
+    margin-top: 1rem;
+  }
+  #outline #focus #skills div ul li {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  h2 {
+    font-size: 4rem;
+    color: #2d2d2d;
+  }
+  h3 {
+    font-size: 2.5rem;
+    color: #2d2d2d;
+  }
+  p {
+    font-size: 1.5rem;
+    color: #373737;
+  }
+  header {
+    height: 5rem;
+  }
+  header img {
+    max-width: 5rem;
+  }
+  nav ul {
+    padding: 0 0.5em;
+  }
+  nav ul li a {
+    font-size: 1.5rem;
+    padding: 0.8em 0.5em;
+  }
+  #outline #toTop {
+    right: 1rem;
+    bottom: 1rem;
+  }
+  #outline #focus #about #headshot {
+    height: 23rem;
+    width: 23rem;
+  }
+  #outline #focus #about #card {
+    min-width: 35rem;
+  }
+  #outline #focus #skills div {
+    min-width: 35rem;
+  }
+  #outline #focus #skills div ul i {
+    font-size: 4rem;
+  }
+  #outline #focus #skills div ul li {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+  #outline #focus #projectpage h2 {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
+  }
+}
+
+@media screen and (max-height: 800px) {
+  #focus {
+    -ms-scroll-snap-type: unset;
+        scroll-snap-type: unset;
+    overflow-y: unset;
+  }
+}
+
+#toTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: unset;
+  border-radius: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#toTop:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#toTop a {
+  font-size: 4rem;
+  color: #464646;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+#toTop a:hover {
+  color: #2d2d2d;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+/*# sourceMappingURL=styles.css.map */
